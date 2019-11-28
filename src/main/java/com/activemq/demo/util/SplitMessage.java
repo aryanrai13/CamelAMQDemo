@@ -42,11 +42,12 @@ public class SplitMessage {
 
         for (String name : names) {
             if (name.equals(inputMessage.getName().trim())) {
-                System.out.println("Names Match");
+             //   System.out.println("Names Match");
                 nameCheck = true;
             }
+            /*
             else
-                System.out.println("Names " + name + " and " + inputMessage.getName() + "Dont Match");
+                System.out.println("Names " + name + " and " + inputMessage.getName() + "Dont Match"); */
         }
 
         if (inputMessage.getSourceCountryCode().trim().equals("AT"))
@@ -57,9 +58,9 @@ public class SplitMessage {
 
         for (String token : tokens)
         {
-            System.out.println(token);
+          //  System.out.println(token);
             if (token.contains("Ship dual FERT chem") && count==2) {
-                System.out.println("Main message error");
+             //   System.out.println("Main message error");
                 mainMessageCheck = true;
             }
             count++;

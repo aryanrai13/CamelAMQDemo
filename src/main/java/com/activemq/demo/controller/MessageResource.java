@@ -1,7 +1,5 @@
 package com.activemq.demo.controller;
 
-
-import com.activemq.demo.model.InputMessage;
 import com.activemq.demo.model.InputServiceMessage;
 import com.activemq.demo.model.ServiceMessage;
 import org.springframework.web.bind.annotation.*;
