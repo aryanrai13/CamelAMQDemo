@@ -12,6 +12,7 @@ public class SplitMessage {
     private boolean nameCheck;
     private boolean souceCountryCodeCheck;
     private boolean serviceCheck;
+    private boolean mainMessageCheck;
 
     public String  inputString;
     List<String> names = new ArrayList<>();
@@ -35,6 +36,10 @@ public class SplitMessage {
         names.add("Shakil Maybe");
         names.add("Big Kumar");
 
+         String[] tokens = inputString.split(":32A:");
+         Integer count = 1;
+
+
         for (String name : names) {
             if (name.equals(inputMessage.getName().trim())) {
                 System.out.println("Names Match");
@@ -50,12 +55,20 @@ public class SplitMessage {
         if (inputMessage.getService().trim().equals("ATZ"))
             serviceCheck = true;
 
+        for (String token : tokens)
+        {
+            System.out.println(token);
+            if (token.contains("Ship dual FERT chem") && count==2) {
+                System.out.println("Main message error");
+                mainMessageCheck = true;
+            }
+            count++;
+        }
+
         if (nameCheck && souceCountryCodeCheck && serviceCheck)
             return ("Suspicious Shipment" + "-" + "AT" + "-" + "ATZ" + "-" + inputMessage.getTrn());
         else
             return ("Nothing found, all okay");
     }
-
-
 
 }
