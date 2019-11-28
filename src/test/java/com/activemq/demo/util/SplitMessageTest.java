@@ -9,7 +9,7 @@ public class SplitMessageTest {
     String message = "GZXFRTJ675FTRHJJJ87zyxtBig Kumar           U000000000000017.450EURATZAT";
     SplitMessage splitMessage = new SplitMessage(message);
 
-    @DisplayName("Check for Message Length")
+    @DisplayName("Check for Input Message Length")
     @Test
     public  void checkMessage() {
         Assertions.assertEquals(splitMessage.inputString.length(),71);
