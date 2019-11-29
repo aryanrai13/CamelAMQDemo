@@ -18,37 +18,37 @@ public class DemoApplicationTests {
 	@DisplayName("Check for Input Message Length")
 	@Test
 	public  void checkMessage() {
-		Assertions.assertEquals(splitMessage.inputString.length(),71);
+		Assertions.assertEquals(71,splitMessage.inputString.length());
 	}
 
 	@DisplayName("Check for TRN")
 	@Test
 	public  void checkTrn() {
-		Assertions.assertEquals(splitMessage.inputMessage.getTrn().trim().length(),22);
+		Assertions.assertEquals(22,splitMessage.inputMessage.getTrn().trim().length());
 	}
 
 	@DisplayName("Check for Format Type")
 	@Test
 	public  void checkFormatType() {
-		Assertions.assertEquals(splitMessage.inputMessage.getFormatType(),"U");
+		Assertions.assertEquals("U",splitMessage.inputMessage.getFormatType());
 	}
 
 	@DisplayName("Check for Currency")
 	@Test
 	public  void checkCurrency() {
-		Assertions.assertEquals(splitMessage.inputMessage.getCurrency().trim().length(),3);
+		Assertions.assertEquals(3,splitMessage.inputMessage.getCurrency().trim().length());
 	}
 
 	@DisplayName("Check for Service")
 	@Test
 	public  void checkService() {
-		Assertions.assertEquals(splitMessage.inputMessage.getService().trim().length(),3);
+		Assertions.assertEquals(3,splitMessage.inputMessage.getService().trim().length());
 	}
 
 	@DisplayName("Check for Source Country Code")
 	@Test
 	public  void checkSourceCountryCode() {
-		Assertions.assertEquals(splitMessage.inputMessage.getSourceCountryCode().trim().length(),2);
+		Assertions.assertEquals(2,splitMessage.inputMessage.getSourceCountryCode().trim().length());
 	}
 
 

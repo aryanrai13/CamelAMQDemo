@@ -66,7 +66,7 @@ public class SplitMessage {
             count++;
         }
 
-        if (nameCheck && souceCountryCodeCheck && serviceCheck)
+        if (nameCheck && souceCountryCodeCheck && serviceCheck && mainMessageCheck)
             return ("Suspicious Shipment" + "-" + "AT" + "-" + "ATZ" + "-" + inputMessage.getTrn());
         else
             return ("Nothing found, all okay");
